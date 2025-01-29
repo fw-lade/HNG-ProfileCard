@@ -1,35 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HNG Internship - Profile Card</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
     <div class="wrapper">
-            <div class="card">
-                <img src="profile.jpg" alt="Profile Picture" data-testid="profilePicture">
-                <h2 data-testid="fullName">Ololade Bello</h2>
-                <h4 data-testid="jobTitle">Frontend Developer</h4>
-                <p data-testid="shortBio">A passionate frontend developer skilled in React, JavaScript, and UI/UX design.</p>
-                <p data-testid="currentLocation">Lagos, Nigeria</p>
-                <p>Email: <a href="mailto:b.ololade03@gmail.com" data-testid="emailAddress">b.ololade03@gmail.com</a></p>
-                <div class="social-links" data-testid="socialLinks">
-                    <a href="https://github.com/johndoe" target="_blank">GitHub</a>
-                    <a href="https://linkedin.com/in/johndoe" target="_blank">LinkedIn</a>
-                    <a href="https://twitter.com/johndoe" target="_blank">Twitter</a>
-                </div>
-                <p id="utcTime" data-testid="currentTimeUTC"></p>
+        <div class="card">
+            <img src="./profilePic.jpg" alt="Profile Picture" data-testid="profilePicture" class="profileImage">
+            <h1 data-testid="fullName">Ololade Bello</h1>
+            <h3 data-testid="jobTitle">Frontend Developer</h3>
+            <p data-testid="shortBio">A passionate frontend developer skilled in React JS.Experienced front-end developer with over 2 years of expertise in building user-friendly, responsive web applications. Adept at converting designs into functional, interactive interfaces and collaborating with backend teams to integrate RESTful APIs. Strong focus on delivering high-quality, maintainable code and improving user experiences through adaptive design and cross-browser compatibility.
+            </p>
+            <h5 data-testid="currentLocation">Lagos, Nigeria</h5>
+            <h5>Email: <a href="mailto:b.ololade03@gmail.com" data-testid="emailAddress">b.ololade03@gmail.com</a></h5>
+            <div class="social-links" data-testid="socialLinks">
+                <a href="https://github.com/fw-lade" target="_blank"><img src="./github.png" alt="githubIcon"></a>
+                <a href="https://www.linkedin.com/in/bello-ololade-85b033233/" target="_blank"><img src="./twitter.png"
+                        alt="twitterIcon"></a>
+                <a href="https://x.com/ololade_dev?t=f9_jNhHWHqUBAgan2QBmtg&s=09" target="_blank"><img
+                        src="./linkedin.png" alt="linkedinIcon"></a>
+                <a href="https://ololade.pages.dev/" target="_blank"><img src="./www.png" alt="portfolio"></a>
             </div>
+            <p data-testid="currentTimeUTC" id="currentTimeUTC"></p>
+        </div>
     </div>
 
     <script>
-        function updateTime() {
-            const now = new Date();
-            document.getElementById("utcTime").innerText = `UTC Time: ${now.toUTCString()}`;
-        }
-        updateTime();
-        setInterval(updateTime, 1000);
+        document.getElementById("currentTimeUTC").textContent = new Date().toUTCString();
     </script>
 </body>
+
 </html>
