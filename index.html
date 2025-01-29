@@ -7,7 +7,29 @@
 </head>
 <body>
     <div class="wrapper">
-        
+            <div class="card">
+                <img src="profile.jpg" alt="Profile Picture" data-testid="profilePicture">
+                <h2 data-testid="fullName">Ololade Bello</h2>
+                <h4 data-testid="jobTitle">Frontend Developer</h4>
+                <p data-testid="shortBio">A passionate frontend developer skilled in React, JavaScript, and UI/UX design.</p>
+                <p data-testid="currentLocation">Lagos, Nigeria</p>
+                <p>Email: <a href="mailto:b.ololade03@gmail.com" data-testid="emailAddress">b.ololade03@gmail.com</a></p>
+                <div class="social-links" data-testid="socialLinks">
+                    <a href="https://github.com/johndoe" target="_blank">GitHub</a>
+                    <a href="https://linkedin.com/in/johndoe" target="_blank">LinkedIn</a>
+                    <a href="https://twitter.com/johndoe" target="_blank">Twitter</a>
+                </div>
+                <p id="utcTime" data-testid="currentTimeUTC"></p>
+            </div>
     </div>
+
+    <script>
+        function updateTime() {
+            const now = new Date();
+            document.getElementById("utcTime").innerText = `UTC Time: ${now.toUTCString()}`;
+        }
+        updateTime();
+        setInterval(updateTime, 1000);
+    </script>
 </body>
 </html>
